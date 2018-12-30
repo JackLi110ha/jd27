@@ -1,0 +1,71 @@
+body {
+    height:100%;
+    padding: .4rem 0 .5rem 0;
+}
+//头部部分
+#header {
+    background-color: #e5e5e5;
+}
+
+//主体部分
+#main {
+ 
+    display: flex;
+    .content-left {
+        width: .85rem;
+        height:100%;
+        background-color: #e5e5e5;
+        li {
+            width: .85rem;
+            height: .45rem;
+            a {
+                width: 100%;
+                display: block;
+                text-align: center;
+                line-height: .45rem;
+            }
+        }
+        .active{
+            background-color: white;
+            a{
+                color: #de181b;
+            }
+        }
+        .swiper-container {
+            width: 100%;
+            height:5.4rem;
+            .swiper-slide {
+                height: auto;
+            }
+        }
+    }
+    .content-right {
+        flex: 1;
+        ul {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 33.3%;
+                text-align: center;
+                a {
+                    display: block;
+                    
+                    img {
+                        width: 70px;
+                    }
+                    span{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .swiper-container {
+            width: 100%;
+            height:5.4rem;
+            .swiper-slide {
+                height: auto;
+            }
+        }
+    }    
+}

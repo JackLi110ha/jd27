@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.css">
+    <script src="./lib/swiper/js/swiper.js"></script>
+  
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 600px;
+            height: 300px;
+            border: 1px solid red;
+            display: flex;
+        }  
+        .container>.swiper-container {
+            flex: 1;
+            border: 1px solid yellow;
+            
+        }
+        .btnList {
+            width: 100px;
+            background-color: #ccc;
+            /* overflow: hidden; */
+        }
+        .btnList .swiper-slide {
+            height:50px;
+            color: black;
+        }
+        .swiper-container {
+            width: 600px;
+            height: 400px;
+        }
+        .swiper-slide {
+            height: auto;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="btnList ">
+            <!-- <ul>
+                <li class="btn"><a href="#">按钮1</a></li>
+                <li class="btn"><a href="#">按钮2</a></li>
+                <li class="btn"><a href="#">按钮3</a></li>
+                <li class="btn"><a href="#">按钮4</a></li>
+                <li class="btn"><a href="#">按钮5</a></li>
+                <li class="btn"><a href="#">按钮6</a></li>
+ 		<li class="btn"><a href="#">修改的内容</a></li>
+<li class="btn"><a href="#">修改的内容</a></li>
+            </ul> -->
+            <div class="swiper-container left">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide a">Slide 1</div>
+                    <div class="swiper-slide a">Slide 2</div>
+                    <div class="swiper-slide a">Slide 3</div>
+                    <div class="swiper-slide a">Slide 4</div>
+                    <div class="swiper-slide a">Slide 5</div>
+                    <div class="swiper-slide a">Slide 6</div>
+                    <div class="swiper-slide a">Slide 7</div>
+                    <div class="swiper-slide a">Slide 8</div>
+                    <div class="swiper-slide a">Slide 9</div>
+                    <div class="swiper-slide a">Slide 10</div>
+                    <div class="swiper-slide a">Slide 11</div>
+                    <div class="swiper-slide a">Slide 12</div>
+                    <div class="swiper-slide a">Slide 13</div>
+                    <div class="swiper-slide a">Slide 14</div>
+                    <div class="swiper-slide a">Slide 15</div>
+                    <div class="swiper-slide a">Slide 16</div>
+                    <div class="swiper-slide a">Slide 17</div>
+                    <div class="swiper-slide a">Slide 18</div>
+                    <div class="swiper-slide a">Slide 19</div>
+                    <div class="swiper-slide a">Slide 20</div>
+                    </div>
+                     <div class="swiper-scrollbar"></div>
+                  </div>
+
+        </div>
+        <div class="swiper-container right">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide">Slide 10</div>
+                <div class="swiper-slide">Slide 11</div>
+                <div class="swiper-slide">Slide 12</div>
+                <div class="swiper-slide">Slide 13</div>
+                <div class="swiper-slide">Slide 14</div>
+                <div class="swiper-slide">Slide 15</div>
+                <div class="swiper-slide">Slide 16</div>
+                <div class="swiper-slide">Slide 17</div>
+                <div class="swiper-slide">Slide 18</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    
+
+   
+     //左边侧栏
+     var swiper = new Swiper('.btnList>.swiper-container.left',{
+		// speed: oriSpeed,
+		slidesPerView: 'auto',
+		freeMode: true,
+        direction: 'vertical',
+		setWrapperSize: false,
+		scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+    var btn=document.getElementsByClassName('a');
+    for(var i=0;i<btn.length;i++){
+        btn[i].setAttribute('index',i);
+        btn[i].onclick=function(){
+        
+            var index=this.getAttribute('index');
+            mySwiper.slideTo(index, 300, false);
+        }
+    }
+
+    //右边侧栏
+    var mySwiper = new Swiper ('.swiper-container.right', {
+        direction: 'vertical', // 垂直切换选项
+        loop: true, // 循环模式选项
+    }) 
+   
+</script>

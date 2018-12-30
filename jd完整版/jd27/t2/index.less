@@ -1,0 +1,360 @@
+//引入初始化代码
+@import 'base.less';
+
+//分类部分
+@import './category.less';
+
+
+//轮播图区域
+#slide {
+    width: auto;
+    height: auto;
+    img {
+        width: 100%;
+    }
+}
+
+//导航区域
+#nav {
+    margin-top: 0.08rem;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            text-align: center;
+            width: 25%;
+            a {
+                img {
+                    width: 0.4rem;
+                    height: 0.4rem;
+                }
+                div {
+                    padding: 0.06rem 0;
+                    font-size: 0.14rem;
+                }
+            }
+        }
+    }
+}
+
+//上课秒杀区域
+#product {
+    background-color: #ccc;
+     padding: 20px 4px 60px 4px;
+     //秒杀区域
+    .killTime {
+        background-color: white;
+        padding-bottom: 10px;
+        //头部部分
+        .title {
+            line-height: 30px;
+            display: flex;
+            justify-content: space-between;
+            .left {
+                display: flex;
+                img {
+                    width: 20px;
+                    height: 30px;
+                    margin-left: 6px;
+                }
+                >span {
+                    color:@main-color;
+                    margin: 0 6px;
+                } 
+                div {
+                    span:not(:nth-child(3n)) {
+                        background-color: black;
+                        color: white;
+                        padding: 1px;
+                    }
+                }
+            }
+
+            .right {
+                margin-right: 8px;
+            }
+        }
+        //身体部分
+        .content {
+            ul {
+                display: flex;
+                li {
+                    text-align: center;
+                    flex: 1;
+                    a {
+                        display: block;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                        p {
+                            span {
+                                color: @main-color;
+                            }
+                            line-height: 16px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    //超市区域
+    .mark {
+        background-color: white;
+        margin-top: 6px;
+        .title {
+            h4 {
+                line-height: 30px;
+                position: relative;
+                margin-left: 18px;
+                &::before{
+                    content: "";
+                    width: 4px;
+                    height: 16px;
+                    background-color: @main-color;
+                    position: absolute;
+                    top: 7px;
+                    left: -8px;
+                }
+            }
+        }
+        .content {
+            display: flex;
+            .left {
+                flex: 1;
+                a {
+                    display: block;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .right {
+                flex: 1;
+                a {
+                    display: block;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//上课尾部部分
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    ul {
+        display: flex;
+        li {
+            flex: 1;
+            a {
+                text-align: center;
+                display: block;
+                img {
+                    width: 65px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+   
+}
+
+
+//秒杀区域
+// #product {
+//     width: 100vw;
+//     margin-bottom: 0.5rem;
+//     background-color: #f5f5f5;
+//     overflow: hidden;
+//     .seckill {
+//         width: 96%;
+//         height: 2rem;
+//         margin: 0.16rem auto;
+//         background-color: #ffffff;
+//         .seckill-title {
+//             width: 100%;
+//             height: 0.3rem;
+//             background-color: #ffffff;
+//             line-height: 0.3rem;
+//             img {
+//                 width: 0.22rem;
+//                 margin: 0 0 0 0.04rem;
+//             }
+//             .handKill {
+//                 color: @main-color;
+//                 margin: 0 0.06rem;
+//                 font-size: 0.14rem;
+//             }
+//             .time {
+//                 .countTime {
+//                     padding:0.02rem ;
+//                     background-color: black;
+//                     color:white;
+//                     font-size: 0.14rem;
+//                 }
+//                 .point {
+//                     font-weight: bold;
+//                     font-size: 0.14rem;
+//                 }
+//             }
+//             .more {
+//                 float: right;
+//                 margin: 0 0.1rem 0 0;
+//                 font-size: 0.14rem;
+//             }
+//         }
+//         .seckill-body {
+//             ul {
+//                 display: flex;
+//                 li:nth-child(2) {
+//                     border-left: 1px solid #ccc;
+//                     border-right: 1px solid #ccc;
+//                 }
+//                 li {
+//                     flex: 1;
+//                     display: flex;
+//                     margin: 0.1rem 0;
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     a {
+//                         text-align: center;
+//                         img {
+//                             width: 100%;
+//                             height: 80%;
+//                         }
+//                         div {
+//                             line-height: 0.16rem;
+//                             font-size: 0.14rem;
+//                             .real {
+//                                 color: @main-color;
+//                             }
+//                         }
+//                     }
+                    
+//                 }
+//             }
+//         }
+        
+//     }
+//     .mark {
+//         width: 96%;
+//         height: 2.24rem;
+//         margin: 0.16rem auto;
+//         background-color: red;
+//         .markTitle {
+//             width: 100%;
+//             height: 0.3rem;
+//             background-color: #ffffff;
+//             padding-top: 0.04rem;
+//             h4 {
+//                 margin-left: 0.1rem;
+//                 padding-left: 0.04rem;
+//                 border-left: 0.04rem solid @main-color;
+//                 font-size: 0.14rem;
+//             }
+//             border-bottom: 0.01rem solid #ccc;
+//         }
+//         .markBody {
+//             display: flex;
+//             div {
+//                 flex: 1;
+//                 img {
+//                     width: 100%;
+//                     height: 100%;
+//                 }
+//             }
+//             .mbRight {
+//                 display: flex;
+//                 flex-direction: column;
+//                 border-left: 0.01rem solid #ccc;
+//                 div {
+//                     flex: 1;
+//                 }
+//                 div:first-child{
+//                     border-bottom: 0.01rem solid #ccc;
+//                 }
+//             }
+//         }
+//     }
+//     .mark1 {
+//         width: 96%;
+//         height: 2.24rem;
+//         margin: 0.16rem auto;
+//         background-color: red;
+//         .markTitle1 {
+//             width: 100%;
+//             height: 0.3rem;
+//             background-color: #ffffff;
+//             padding-top: 0.04rem;
+//             h4 {
+//                 margin-left: 0.1rem;
+//                 padding-left: 0.04rem;
+//                 border-left: 0.04rem solid @main-color;
+//                 font-size: 0.14rem;
+//             }
+//             border-bottom: 0.01rem solid #ccc;
+//         }
+//         .markBody1 {
+//             display: flex;
+//             div {
+//                 flex: 1;
+//                 img {
+//                     width: 100%;
+//                     height: 100%;
+//                 }
+//             }
+//             .mbRight1 {
+//                 display: flex;
+//                 flex-direction: column;
+//                 border-left: 0.01rem solid #ccc;
+//                 div {
+//                     flex: 1;
+//                 }
+//                 div:first-child{
+//                     border-bottom:0.01rem solid #ccc;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// //底部区域
+// #footer {
+//     width: 100vw;
+//     height: 0.5rem;
+//     background-color: white;
+//     position: fixed;
+//     bottom: 0;
+//     left: 0;
+
+//     ul {
+//         width: 100%;
+//         height: 100%;
+//         display: flex;
+//         justify-content: space-around;
+//         align-items: center;
+//         li {
+//             flex: 1;
+//             text-align: center;
+//             a {
+                
+//                 img {
+//                     width: 0.7rem;
+//                 }
+//             }
+//         }
+//     }
+    
+// }
